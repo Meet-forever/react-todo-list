@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from 'react'
+import Form from "./components/Form";
+import ListContainer from "./components/ListContainer";
 
 function App() {
+  const [inputText, setText] = useState("");
+  const [textArr, setArr] = useState([]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <header><h1>TODO LIST</h1></header>
+      
+      <Form 
+      inputText={inputText}
+      setText={setText}
+      textArr={textArr}
+      setArr={setArr}/>
+      <ListContainer 
+      inputText={inputText}
+      setText={setText}
+      textArr={textArr}
+      setArr={setArr}/>      
     </div>
   );
 }
