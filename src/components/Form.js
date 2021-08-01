@@ -20,9 +20,11 @@ export default function Form({inputText, setText, textArr, setArr, setCondition}
     }; 
     return (
         <form>
-            <input value={inputText} type="text" onInput={InputHandler} />
-            <button type="submit" onClick={SubmitHandler}>Submit</button>
-            <select onChange={OptionHandler}>
+            <div>
+                <input className="inputTextArea" value={inputText} type="text" onInput={InputHandler} />
+                <button className="submit-btn" type="submit" onClick={SubmitHandler}>Submit</button>
+            </div>
+            <select className="selectBox" onChange={OptionHandler}>
                 <option value="all" >ALL</option>
                 <option value="completed" >Completed</option>
                 <option value="remaining" >Remaining</option>

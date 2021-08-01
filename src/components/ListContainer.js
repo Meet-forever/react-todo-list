@@ -1,36 +1,28 @@
 import AddList from "./AddList";
 
 export default function ListContainer({condition, textArr, setArr}){
+   
+    const ListContainerHandler = (items) =>{
+        return (<AddList 
+            listVal = {items.userString}
+            key = {items.id}
+            textArr = {textArr}
+            currenti = {items}
+            setArr = {setArr}
+            condition = {condition}/>)
+    }
     return(
-        <div>
-            <ul>
+        <div className="ListBox">
+            <ul className="ListContainer">
                 {textArr.map(items => (
                     (condition === "all")?
-                    <AddList 
-                    listVal = {items.userString}
-                    key = {items.id}
-                    textArr = {textArr}
-                    currenti = {items}
-                    setArr = {setArr}
-                    condition = {condition}/>
+                        ListContainerHandler(items)
                     :
                     (condition === "completed" && items.status)?
-                    <AddList 
-                    listVal = {items.userString}
-                    key = {items.id}
-                    textArr = {textArr}
-                    currenti = {items}
-                    setArr = {setArr}
-                    condition = {condition}/>
+                        ListContainerHandler(items)
                     :
                     (condition === "remaining" && !items.status)?
-                    <AddList 
-                    listVal = {items.userString}
-                    key = {items.id}
-                    textArr = {textArr}
-                    currenti = {items}
-                    setArr = {setArr}
-                    condition = {condition}/>
+                        ListContainerHandler(items)
                     :
                     null
                 ))}

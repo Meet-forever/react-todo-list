@@ -15,10 +15,10 @@ export default function AddList({listVal, textArr, setArr, currenti}) {
        setArr(textArr.filter((ele) => (ele.id !== currenti.id)));
     };
     return (
-        <>
-          <li className={`${(currenti.status)? "completed": ""}`}>{listVal}</li>
-          <button className="done-btn" onClick={DoneHandler}>-</button>
-          <button className="remove-btn" onClick={RemoveHandler}>x</button> 
-        </>
+        <div className={`SingleList ${(currenti.status)? "paintIt": ""}`}>
+          <li className={`${(currenti.status)? "completed paintIt": ""}`}>{listVal}</li>
+            <button className="done-btn" onClick={DoneHandler}>-</button>
+            <button className="remove-btn" onClick={RemoveHandler}>x</button> 
+        </div>
     )
 }

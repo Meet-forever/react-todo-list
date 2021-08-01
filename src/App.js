@@ -8,7 +8,6 @@ function App() {
   const [condition, setCondition] = useState("all");
   return (
     <div className="App">
-      
       <header><h1>TODO LIST</h1></header>
       
       <Form 
@@ -23,7 +22,6 @@ function App() {
       textArr={textArr}
       condition={condition}
       setArr={setArr}/> 
-
 
     </div>
   );
