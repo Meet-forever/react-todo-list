@@ -16,13 +16,18 @@ function App() {
       setText={setText}
       textArr={textArr}
       setArr={setArr}
+      condition={condition}
       setCondition={setCondition}/>
+
+
       <ListContainer 
       textArr={textArr}
       condition={condition}
-      setArr={setArr}/>      
+      setArr={setArr}/> 
+
+
     </div>
   );
 }
-
+ 
 export default App;

@@ -1,5 +1,5 @@
 
-export default function Form({inputText, setText, textArr, setArr, setCondition}) {
+export default function Form({inputText, setText, textArr, setArr, condition, setCondition}) {
     const InputHandler = (e) =>{
         setText(e.target.value);
     };
@@ -11,7 +11,6 @@ export default function Form({inputText, setText, textArr, setArr, setCondition}
                 userString: inputText,
                 status: false,
                 id: Math.random() * 1000,
-                hide: false
             }
         ]);
         setText("");

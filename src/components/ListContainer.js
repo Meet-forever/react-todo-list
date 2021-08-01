@@ -5,13 +5,19 @@ export default function ListContainer({condition, textArr, setArr}){
         <div>
             <ul>
                 {textArr.map(items => (
-                    <AddList 
+                   (!condition)? <AddList 
                     listVal = {items.userString}
                     key = {items.id}
                     textArr = {textArr}
                     currenti = {items}
                     setArr = {setArr}
-                    condition = {condition}/>
+                    condition = {condition}/>:(items.status === true)? <AddList 
+                    listVal = {items.userString}
+                    key = {items.id}
+                    textArr = {textArr}
+                    currenti = {items}
+                    setArr = {setArr}
+                    condition = {condition}/>:null
                 ))}
                 
             </ul>
