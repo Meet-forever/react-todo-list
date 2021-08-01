@@ -1,5 +1,5 @@
 
-export default function Form({inputText, setText, textArr, setArr, condition, setCondition}) {
+export default function Form({inputText, setText, textArr, setArr, setCondition}) {
     const InputHandler = (e) =>{
         setText(e.target.value);
     };
@@ -10,25 +10,29 @@ export default function Form({inputText, setText, textArr, setArr, condition, se
             {
                 userString: inputText,
                 status: false,
-                id: Math.random() * 1000,
+                id: Math.random() * 1000
             }
         ]);
         setText("");
     };
-    const CheckHandler = () =>{
-        setCondition(i => true);
-    };
-    const ALLHandler = () => {
-        setCondition(i => false);
-    };
+    const OptionHandler = (e) =>{
+        setCondition(e.target.value);
+    }; 
     return (
         <form>
             <input value={inputText} type="text" onInput={InputHandler} />
             <button type="submit" onClick={SubmitHandler}>Submit</button>
-            <input type="radio" id="finished" name="options" value="finished" onClick={CheckHandler}/>
-            <label htmlFor="finished">Completed</label>
-            <input type="radio" id="all" name="options" value="all" onClick={ALLHandler} />
-            <label htmlFor="all">ALL</label>    
+            <select onChange={OptionHandler}>
+                <option value="all" >ALL</option>
+                <option value="completed" >Completed</option>
+                <option value="remaining" >Remaining</option>
+            </select>    
         </form>
     )
 }
+
+
+// <input type="radio" id="finished" name="options" value="finished" onClick={CheckHandler}/>
+// <label htmlFor="finished">Completed</label>
+// <input type="radio" id="all" name="options" value="all" onClick={ALLHandler} />
+// <label htmlFor="all">ALL</label>

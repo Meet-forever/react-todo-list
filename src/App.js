@@ -5,7 +5,7 @@ import ListContainer from "./components/ListContainer";
 function App() {
   const [inputText, setText] = useState("");
   const [textArr, setArr] = useState([]);
-  const [condition, setCondition] = useState(false);
+  const [condition, setCondition] = useState("all");
   return (
     <div className="App">
       
@@ -16,7 +16,6 @@ function App() {
       setText={setText}
       textArr={textArr}
       setArr={setArr}
-      condition={condition}
       setCondition={setCondition}/>
 
 
