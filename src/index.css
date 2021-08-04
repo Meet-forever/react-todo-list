@@ -5,11 +5,11 @@
     font-size: 14px;
 }
 body{
-    background-color: rgb(68, 68, 68);
+    background-color: rgb(44, 44, 44);
 }
 header{
     text-align: center;
-    margin: 60px auto;
+    margin: 20px auto 60px auto;
     color: #fff;
     letter-spacing: 1px;
 }
@@ -91,4 +91,14 @@ input:focus{
 }
 .paintIt{
     background-color: rgb(117, 117, 117);
+}
+.clear-btn-set{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 30px 15% 20px 0; 
+}
+.clear-btn{
+    padding: 5px;    
+    font-weight: 400;
 }

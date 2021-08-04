@@ -11,7 +11,7 @@ export default function Form({
   };
   const SubmitHandler = (e) => {
     e.preventDefault();
-    if(inputText != ""){
+    if(inputText !== ""){
         setArr((i) => [
             ...textArr,
             {
