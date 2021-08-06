@@ -16,9 +16,11 @@ export default function AddList({listVal, textArr, setArr, currenti}) {
     };
     return (
         <div className={`SingleList ${(currenti.status)? "paintIt": ""}`}>
-          <li className={`${(currenti.status)? "completed paintIt": ""}`}>{listVal}</li>
+          <input aria-label="List" className={`inputList ${(currenti.status)? "completed paintIt": ""}`} readOnly value={listVal}/>
+            <div>
             <button className="done-btn" onClick={DoneHandler}>-</button>
             <button className="remove-btn" onClick={RemoveHandler}>x</button> 
+            </div>
         </div>
     )
 }

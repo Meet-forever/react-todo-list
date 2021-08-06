@@ -13,7 +13,7 @@ export default function ListContainer({condition, textArr, setArr}){
     }
     return(
         <div className="ListBox">
-            <ul className="ListContainer">
+            <div className="ListContainer">
                 {textArr.map(items => (
                     (condition === "all")?
                         ListContainerHandler(items)
@@ -27,7 +27,7 @@ export default function ListContainer({condition, textArr, setArr}){
                     null
                 ))}
                 
-            </ul>
+            </div>
         </div>
     );
 }
