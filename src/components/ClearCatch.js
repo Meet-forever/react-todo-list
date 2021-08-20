@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {DeleteSweep} from '@material-ui/icons';
 
 export default function ClearCatch({setArr}) {
     const clearHandler = () => {
@@ -9,7 +9,7 @@ export default function ClearCatch({setArr}) {
 
     return (
         <div className="clear-btn-set">
-                <button onClick={clearHandler} className="clear-btn" type='button'>Clear Catch</button>
+                <button onClick={clearHandler} className="clear-btn" type='button'><DeleteSweep /></button>
         </div>
     )
 }

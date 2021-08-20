@@ -1,3 +1,4 @@
+import { Delete, Done } from '@material-ui/icons';
 
 export default function AddList({listVal, textArr, setArr, currenti}) {
     const DoneHandler = () =>{
@@ -18,8 +19,8 @@ export default function AddList({listVal, textArr, setArr, currenti}) {
         <div className={`SingleList ${(currenti.status)? "paintIt": ""}`}>
           <input aria-label="List" className={`inputList ${(currenti.status)? "completed paintIt": ""}`} readOnly value={listVal}/>
             <div>
-            <button className="done-btn" onClick={DoneHandler}>-</button>
-            <button className="remove-btn" onClick={RemoveHandler}>x</button> 
+            <button className="done-btn" onClick={DoneHandler}><Done /></button>
+            <button className="remove-btn" onClick={RemoveHandler}><Delete /></button> 
             </div>
         </div>
     )

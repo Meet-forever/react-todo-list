@@ -1,3 +1,5 @@
+import {AddBox} from '@material-ui/icons'
+
 export default function Form({
   inputText,
   setText,
@@ -28,7 +30,7 @@ export default function Form({
   };
   return (
     <form>
-      <div>
+      <div style={{display:'flex', justifyContent: 'center', alignItems: 'center'}}>
         <input
           className="inputTextArea"
           value={inputText}
@@ -36,7 +38,7 @@ export default function Form({
           onInput={InputHandler}
         />
         <button className="submit-btn" type="submit" onClick={SubmitHandler}>
-          Submit
+         <AddBox fontSize="large" />
         </button>
       </div>
       <select className="selectBox" onChange={OptionHandler}>
